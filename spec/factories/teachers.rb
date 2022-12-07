@@ -7,7 +7,7 @@ FactoryBot.define do
       Faker::Name.last_name
     end
     email { Faker::Internet.email }
-    password { 'malutka1' }
-    password_confirmation { 'malutka1' }
+    password { 'dupablada' }
+    password_confirmation { 'dupablada' }
   end
 end
