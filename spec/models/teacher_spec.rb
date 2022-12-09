@@ -37,7 +37,7 @@ RSpec.describe Teacher, type: :model do
   describe 'email validation fail' do
     it 'for unique email' do
       teacher_1 = build(:teacher, attributes_for(:teacher, email: 'paleass'))
-      teacher_2 = Teacher.new(attributes_for(:teacher, email: 'paleass'))
+      teacher_2 = build(:teacher, attributes_for(:teacher, email: 'paleass'))
       expect(teacher_2).not_to be_valid
 >>>>>>> email unique validation spec fixed
     end
