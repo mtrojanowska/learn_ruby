@@ -11,6 +11,8 @@ gem 'rails', '~> 7.0.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
+# Use sqlite3 as the database for Active Record
+# gem 'sqlite3', '~> 1.4'
 gem 'pg'
 
 # Use the Puma web server [https://github.com/puma/puma]
@@ -56,6 +58,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'pry', '~> 0.13.1'
   gem 'rspec', '~> 3.12'
   gem 'rspec-rails', '~> 6.0.0'
   gem 'rubocop'
