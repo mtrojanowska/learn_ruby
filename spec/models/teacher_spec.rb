@@ -1,4 +1,4 @@
-require 'pry'
+require 'irb'
 require 'rails_helper'
 RSpec.describe Teacher, type: :model do
   describe 'happy path' do
