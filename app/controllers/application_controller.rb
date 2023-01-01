@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-<<<<<<< HEAD
-  def new; end
-
-  def create; end
-=======
   protect_from_forgery with: :exception, prepend: true
   before_action :authenticate_teacher!
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -19,5 +14,4 @@ class ApplicationController < ActionController::Base
                                       keys: %i[first_name last_name email password current_password
                                                password_confirmation])
   end
->>>>>>> authentication of teachers with devise
 end
