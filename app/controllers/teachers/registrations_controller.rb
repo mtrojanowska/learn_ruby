@@ -14,6 +14,7 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
     @teacher = Teacher.new(sign_up_params)
     if @teacher.save
       redirect_to root_path
+      flash[:notice] = 'Account has been successfully created'
     else
       super
     end
