@@ -1,40 +1,18 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/marta/MT/Karol/learn_ruby/spec/features/teacher_sign_in_spec.rb": {
+      "/home/marta/MT/Karol/learn_ruby/spec/models/teacher_spec.rb": {
         "lines": [
           1,
           1,
           1,
-          1,
-          1,
-          1,
+          6,
           null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          2,
+          2,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -42,12 +20,10 @@
       "/home/marta/MT/Karol/learn_ruby/spec/rails_helper.rb": {
         "lines": [
           null,
-          null,
           1,
           1,
           1,
           null,
-          1,
           1,
           1,
           null,
@@ -83,13 +59,8 @@
           0,
           null,
           1,
+          null,
           1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -112,7 +83,7 @@
           null,
           null,
           null,
-          null,
+          1,
           null,
           null,
           1,
@@ -657,14 +628,16 @@
           1,
           1,
           1,
-          1,
+          5,
           null,
           1,
-          1,
+          5,
           null,
-          2,
-          2,
-          2,
+          6,
+          null,
+          null,
+          6,
+          6,
           null,
           null
         ]
@@ -716,24 +689,6 @@
           null
         ]
       },
-      "/home/marta/MT/Karol/learn_ruby/app/helpers/home_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/marta/MT/Karol/learn_ruby/spec/support/devise.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
       "/home/marta/MT/Karol/learn_ruby/spec/support/factory_bot.rb": {
         "lines": [
           1,
@@ -741,38 +696,21 @@
           null
         ]
       },
-      "/home/marta/MT/Karol/learn_ruby/app/controllers/home_controller.rb": {
+      "/home/marta/MT/Karol/learn_ruby/spec/support/teacher_sign_in.rb": {
         "lines": [
           1,
           1,
-          1,
-          null,
-          1,
-          null
-        ]
-      },
-      "/home/marta/MT/Karol/learn_ruby/app/controllers/application_controller.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
           0,
           0,
           0,
-          null,
-          null,
+          0,
+          0,
+          0,
           null,
           null
         ]
       }
     },
-    "timestamp": 1671045006
+    "timestamp": 1672765549
   }
 }

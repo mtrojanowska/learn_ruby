@@ -4,5 +4,5 @@ class Teacher < ApplicationRecord
 
   devise :database_authenticatable, :registerable, :validatable
 
-  validates :first_name, :last_name, presence: true
+  validates :first_name, :last_name, :password_confirmation, presence: true
 end
