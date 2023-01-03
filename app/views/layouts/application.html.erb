@@ -7,10 +7,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application" %>
+    
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= link_to 'SignUp', new_teacher_registration_path %>
+     <%= link_to 'SignIn', new_teacher_session_path %>
+    <%= link_to 'SignOut', destroy_teacher_session_path, 'data-turbo-method': :delete %>
+    <%= link_to 'Edit Account', edit_teacher_registration_path %>
+    
     <%= yield %>
   </body>
 </html>
