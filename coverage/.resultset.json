@@ -1,25 +1,25 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/marta/MT/Karol/learn_ruby/spec/models/teacher_spec.rb": {
+      "/home/marta/MT/Karol/learn_ruby/spec/features/teacher_sign_in_spec.rb": {
         "lines": [
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
           null,
           1,
           1,
           2,
           2,
           2,
-          2,
-          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -29,11 +29,24 @@
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null,
           1,
-          2,
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -85,7 +98,7 @@
           1,
           1,
           1,
-          8,
+          3,
           null,
           null,
           null,
@@ -94,6 +107,9 @@
           null,
           null,
           null,
+          1,
+          null,
+          1,
           1,
           null,
           null,
@@ -726,11 +742,6 @@
         "lines": [
           1,
           1,
-          1,
-          1,
-          0,
-          0,
-          null,
           null
         ]
       },
@@ -740,8 +751,39 @@
           1,
           null
         ]
+      },
+      "/home/marta/MT/Karol/learn_ruby/app/controllers/home_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/marta/MT/Karol/learn_ruby/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          8,
+          8,
+          8,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1672767912
+    "timestamp": 1672772367
   }
 }

@@ -10,7 +10,7 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
   def create
     @teacher = Teacher.new(sign_up_params)
     if @teacher.save
-      logi_in(@teacher)
+      sign_in(@teacher)
       redirect_to root_path
       flash[:notice] = 'Account has been successfully created'
     else
