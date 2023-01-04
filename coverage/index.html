@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-03T18:05:49+01:00">2023-01-03T18:05:49+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-04T12:51:52+01:00">2023-01-04T12:51:52+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  93.14%
+  93.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.27
+         1.17
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>102</b> relevant lines,
-    <span class="green"><b>95</b> lines covered</span> and
+    <b>100</b> relevant lines,
+    <span class="green"><b>93</b> lines covered</span> and
     <span class="red"><b>7</b> lines missed. </span>
     (<span class="green">
-  93.14%
+  93.0%
 </span>
 )
   </div>
@@ -227,22 +227,22 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d62edc4524e531b03ed422bd108707282666f4b1" class="src_link" title="spec/factories/teachers.rb">spec/factories/teachers.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.56</td>
+            <td class="cell--number">2.75</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#72d026600dc648becba860321ca9a40b6043a6ea" class="src_link" title="spec/models/teacher_spec.rb">spec/models/teacher_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">8</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.11</td>
+            <td class="cell--number">2.00</td>
             
           </tr>
         
@@ -556,7 +556,7 @@
 
             
 
-            <code class="ruby">  validates :first_name, :last_name, :password_confirmation, presence: true</code>
+            <code class="ruby">  validates :first_name, :last_name, presence: true</code>
           </li>
         </div>
       
@@ -6486,8 +6486,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>8</b> relevant lines.
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -6532,8 +6532,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="4">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="4" data-linenumber="4">
+            <span class="hits">4</span>
             
 
             
@@ -6565,8 +6565,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="7">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="4" data-linenumber="7">
+            <span class="hits">4</span>
             
 
             
@@ -6587,8 +6587,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="9">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="5" data-linenumber="9">
+            <span class="hits">5</span>
             
 
             
@@ -6598,13 +6598,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
+          <li class="covered" data-hits="5" data-linenumber="10">
+            <span class="hits">5</span>
             
 
-            <code class="ruby">    # password { &#39;dupablada&#39; }</code>
+            
+
+            <code class="ruby">    password { Faker::Internet.password(min_length: 8) }</code>
           </li>
         </div>
       
@@ -6615,45 +6615,12 @@
 
             
 
-            <code class="ruby">    # password_confirmation { &#39;dupablada&#39; }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="12">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">    password { Faker::Internet.password(min_length: 8) }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="6" data-linenumber="13">
-            <span class="hits">6</span>
-            
-
-            
-
-            <code class="ruby">    password_confirmation { :password }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -6682,8 +6649,8 @@
     
 
     <div class="t-line-summary">
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>8</b> relevant lines.
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -6728,8 +6695,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="4">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="5" data-linenumber="4">
+            <span class="hits">5</span>
             
 
             
@@ -6794,18 +6761,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="10">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    it { is_expected.to validate_presence_of(:password_confirmation) }</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -6816,7 +6772,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
