@@ -1,8 +1,8 @@
 require 'rails_helper'
 require 'irb'
 describe 'teacher signs_up' do
-  feature 'successfully' do
-    scenario 'with right credentials' do
+  describe 'successfully' do
+    it 'with right credentials' do
       # Capybara.current_driver = :selenium_chrome
       visit root_path
       click_link 'SignUp'
@@ -16,8 +16,9 @@ describe 'teacher signs_up' do
       expect(page).to have_content 'Instead of devise message'
     end
   end
-  feature 'unsuccessfully', js: true do
-    scenario 'with password too weak' do
+
+  describe 'unsuccessfully' do
+    it 'with password too weak' do
       visit root_path
       click_link 'SignUp'
       visit new_teacher_registration_path
