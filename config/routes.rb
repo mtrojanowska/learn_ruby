@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  devise_for :teachers
+
+  root to: 'home#index'
+  devise_scope :teacher do
+    get '/teachers/sign_out', to: 'devise/sessions#destroy'
+  end
 end
