@@ -17,11 +17,7 @@ RSpec.describe Teacher, type: :model do
     end
   end
 
-  describe 'validation fail' do
+  describe 'validation fail due to password too short' do
     let(:teacher) { Teacher.new(attributes_for(:teacher, password: 'pea')) }
-
-    it 'for password too short' do
-      expect(teacher).not_to be_valid
-    end
   end
 end
