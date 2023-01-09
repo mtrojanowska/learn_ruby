@@ -1,6 +1,6 @@
 require 'rails_helper'
 RSpec.describe Teacher, type: :model do
-  describe 'validations' do
+  describe 'presence validations' do
     subject { build(:teacher) }
 
     it { is_expected.to validate_presence_of(:first_name) }
@@ -9,15 +9,17 @@ RSpec.describe Teacher, type: :model do
     it { is_expected.to validate_presence_of(:password) }
   end
 
-  describe 'email validation fail' do
-    it 'for unique email' do
-      teacher_1 = create(:teacher, attributes_for(:teacher))
-      teacher_2 = build(:teacher, attributes_for(:teacher, email: teacher_1.email))
-      expect(teacher_2).not_to be_valid
-    end
-  end
+  describe 'email uniqueness' do
+    subject { build(:teacher) }
 
-  describe 'validation fail due to password too short' do
-    let(:teacher) { Teacher.new(attributes_for(:teacher, password: 'pea')) }
+    it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
+  end
+end
+
+describe 'password length validation' do
+  let(:teacher) { Teacher.new(attributes_for(:teacher, password: 'pea')) }
+
+  it 'fails' do
+    expect(teacher).not_to be_valid
   end
 end
