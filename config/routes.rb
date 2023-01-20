@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :teachers, controllers: {
 
-  devise_for :teachers
+    registrations: 'teachers/registrations'
+
+  }
 
   root to: 'home#index'
   devise_scope :teacher do

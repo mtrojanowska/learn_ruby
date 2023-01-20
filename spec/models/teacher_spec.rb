@@ -1,25 +1,34 @@
+require 'pry'
 require 'rails_helper'
 RSpec.describe Teacher, type: :model do
-  describe 'presence validations' do
-    subject { build(:teacher) }
-
-    it { is_expected.to validate_presence_of(:first_name) }
-    it { is_expected.to validate_presence_of(:last_name) }
-    it { is_expected.to validate_presence_of(:email) }
-    it { is_expected.to validate_presence_of(:password) }
+  describe 'happy path' do
+    it 'returnes valid object' do
+      teacher = build(:teacher, attributes_for(:teacher))
+      expect(teacher).to be_valid
+    end
   end
 
-  describe 'email uniqueness' do
-    subject { build(:teacher) }
+    describe 'validation success' do
+      let(:teacher) { Teacher.new(attributes_for(:teacher)) }
 
-    it { is_expected.to validate_uniqueness_of(:email).case_insensitive }
+      it { is_expected.to validate_presence_of(:first_name) }
+      it { is_expected.to validate_presence_of(:last_name) }
+      it { is_expected.to validate_presence_of(:email) }
+      it { is_expected.to validate_presence_of(:password) }
+    end
+
+    describe 'email uniqeness fail' do
+      let(:teacher) { Teacher.new(attributes_for(:teacher)) }
+      let(:teacher_email_dup) { Teacher.new(attributes_for(:teacher, email: teacher.email)) }
+
+      it { is_expected.not_to validate_uniqueness_of(:email) }
+    end
   end
-end
 
-describe 'password length validation' do
-  let(:teacher) { Teacher.new(attributes_for(:teacher, password: 'pea')) }
-
-  it 'fails' do
-    expect(teacher).not_to be_valid
+  describe 'validation fail' do
+    let(:teacher) { Teacher.new(attributes_for(:teacher, password: 'pea')) }
+    it 'for password too short' do
+      expect(teacher).not_to be_valid
+    end
   end
 end
