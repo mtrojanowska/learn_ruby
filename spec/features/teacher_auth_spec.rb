@@ -32,6 +32,7 @@ describe 'teacher signs_up' do
       click_button 'Sign up'
       expect(page).to have_current_path '/teachers'
       expect(page).to have_content 'Password is too short (minimum is 6 characters)'
+
       sleep(5)
     end
   end

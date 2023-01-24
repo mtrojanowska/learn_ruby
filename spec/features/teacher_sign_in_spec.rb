@@ -6,7 +6,7 @@ RSpec.describe Teacher, type: :feature do
     fill_in 'teacher_password', with: teacher.password
     click_on 'Log in'
   end
-  sleep(3)
+  
   describe 'signs in' do
     it 'successfully' do
       Capybara.current_driver = :selenium_chrome
