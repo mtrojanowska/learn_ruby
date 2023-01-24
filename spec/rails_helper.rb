@@ -55,6 +55,7 @@ RSpec.configure do |config|
 
   config.include Rails.application.routes.url_helpers
   config.include Capybara::DSL
+  Capybara.current_driver = :selenium_chrome
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false
