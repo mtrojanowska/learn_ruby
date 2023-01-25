@@ -52,10 +52,11 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
-
+ 
   config.include Rails.application.routes.url_helpers
   config.include Capybara::DSL
-  Capybara.current_driver = :selenium_chrome
+
+  Capybara.default_driver = :selenium_chrome  
 
   # You can uncomment this line to turn off ActiveRecord support entirely.
   # config.use_active_record = false

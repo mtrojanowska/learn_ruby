@@ -9,18 +9,15 @@ RSpec.describe Teacher, type: :feature do
 
   describe 'signs in' do
     it 'successfully' do
-      Capybara.current_driver = :selenium_chrome
       teacher = create(:teacher, attributes_for(:teacher))
       visit root_path
       click_link 'SignIn'
       sign_in(teacher)
       expect(page).to have_content 'Signed in successfully.'
-      sleep(6)
     end
 
     describe 'teacher is not signed_in' do
       it 'with wrong credentials' do
-        Capybara.current_driver = :selenium_chrome
         teacher = create(:teacher, attributes_for(:teacher))
         visit root_path
         wrong_credentials = build(:teacher,
@@ -31,13 +28,11 @@ RSpec.describe Teacher, type: :feature do
         fill_in 'teacher_password', with: wrong_credentials.password
         click_button 'Log in'
         expect(page).to have_content 'Invalid Email or password.'
-        sleep(6)
       end
     end
 
     describe 'signs out' do
       it 'successfully' do
-        Capybara.current_driver = :selenium_chrome
         teacher = create(:teacher, attributes_for(:teacher))
         visit root_path
         click_link 'SignIn'
@@ -45,7 +40,6 @@ RSpec.describe Teacher, type: :feature do
         expect(page).to have_content 'Signed in successfully.'
         click_link 'SignOut'
         expect(page).to have_content 'Signed out successfully'
-        sleep(6)
       end
     end
   end
