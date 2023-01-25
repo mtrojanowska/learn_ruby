@@ -3,7 +3,6 @@ require 'irb'
 describe 'teacher signs_up' do
   describe 'successfully' do
     it 'with right credentials' do
-      Capybara.current_driver = :selenium_chrome
       visit root_path
       click_link 'SignUp'
       visit new_teacher_registration_path
@@ -14,13 +13,11 @@ describe 'teacher signs_up' do
       fill_in 'teacher_password_confirmation', with: 'password'
       expect { find_button(value: 'Sign up').click }.to change(Teacher, :count).by(1)
       expect(page).to have_content 'Welcome!'
-      sleep(6)
     end
   end
 
   describe 'unsuccessfully' do
     it 'with password too weak' do
-      Capybara.current_driver = :selenium_chrome
       visit root_path
       click_link 'SignUp'
       visit new_teacher_registration_path
@@ -32,8 +29,6 @@ describe 'teacher signs_up' do
       click_button 'Sign up'
       expect(page).to have_current_path '/teachers'
       expect(page).to have_content 'Password is too short (minimum is 6 characters)'
-
-      sleep(5)
     end
   end
 end
