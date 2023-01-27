@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'irb'
+
 describe 'teacher signs_up' do
   describe 'successfully' do
     it 'with right credentials' do
