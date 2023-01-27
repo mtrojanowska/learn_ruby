@@ -20,12 +20,9 @@ RSpec.describe Teacher, type: :feature do
       it 'with wrong credentials' do
         teacher = create(:teacher, attributes_for(:teacher))
         visit root_path
-        wrong_credentials = build(:teacher,
-                                  attributes_for(:teacher, email: 'wrong_email@example.com',
-                                                           password: 'wrong_password'))
         click_link 'SignIn'
-        fill_in 'teacher_email', with: wrong_credentials.email
-        fill_in 'teacher_password', with: wrong_credentials.password
+        fill_in 'teacher_email', with: 'wrong_email@example.com'
+        fill_in 'teacher_password', with: 'random_password'
         click_button 'Log in'
         expect(page).to have_content 'Invalid Email or password.'
       end
