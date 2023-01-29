@@ -9,7 +9,7 @@ RSpec.describe Teacher, type: :feature do
 
   describe 'signs in' do
     it 'successfully' do
-      teacher = create(:teacher, attributes_for(:teacher))
+      teacher = create(:teacher)
       visit root_path
       click_link 'SignIn'
       sign_in(teacher)
@@ -18,7 +18,7 @@ RSpec.describe Teacher, type: :feature do
 
     describe 'teacher is not signed_in' do
       it 'with wrong credentials' do
-        teacher = create(:teacher, attributes_for(:teacher))
+        teacher = create(:teacher)
         visit root_path
         click_link 'SignIn'
         fill_in 'teacher_email', with: 'wrong_email@example.com'
@@ -30,7 +30,7 @@ RSpec.describe Teacher, type: :feature do
 
     describe 'signs out' do
       it 'successfully' do
-        teacher = create(:teacher, attributes_for(:teacher))
+        teacher = create(:teacher)
         visit root_path
         click_link 'SignIn'
         sign_in(teacher)
