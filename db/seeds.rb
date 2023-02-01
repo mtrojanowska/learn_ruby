@@ -8,23 +8,26 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
    
-    teachers = Teacher.create!( 
-                  [ {     
+    teachers = Teacher.create!([
+         {     
         first_name: Faker::Name.first_name,
         last_name: Faker::Name.last_name,
         email: 'random@example.com', 
-        password: 'dupablada'},
-                       {      
+        password: 'dupablada'
+         },
+         {      
         first_name: Faker::Name.first_name,
         last_name: Faker::Name.last_name,
         email: 'random1@example.com', 
-        password: 'dupablada1'},
-                            {
+        password: 'dupablada1'
+         },
+         {
         first_name: Faker::Name.first_name,
         last_name: Faker::Name.last_name,
         email: 'random3@example.com', 
-        password: 'dupablada3'}]
-                            ).find_or_create_by!(email: teacher[:email])
+        password: 'dupablada3'
+        }]
+        )
     
     
     
