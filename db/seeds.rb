@@ -7,27 +7,26 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-   
-    teachers = Teacher.create!([
-         {     
-        first_name: Faker::Name.first_name,
-        last_name: Faker::Name.last_name,
-        email: 'random@example.com', 
-        password: 'dupablada'
-         },
-         {      
-        first_name: Faker::Name.first_name,
-        last_name: Faker::Name.last_name,
-        email: 'random1@example.com', 
-        password: 'dupablada1'
-         },
-         {
-        first_name: Faker::Name.first_name,
-        last_name: Faker::Name.last_name,
-        email: 'random3@example.com', 
-        password: 'dupablada3'
-        }]
-        )
+
+    teacher1 = Teacher.find_or_create_by!(email: 'random1@example.com') do |teacher|
+        teacher.first_name = Faker::Name.first_name
+        teacher.last_name = Faker::Name.last_name
+        teacher.password = 'dupablada1'
+      end
+
+    
+      teacher2 = Teacher.find_or_create_by!(email: 'random2@example.com') do |teacher|
+        teacher.first_name = Faker::Name.first_name
+        teacher.last_name = Faker::Name.last_name
+        teacher.password = 'dupablada2'
+      end
+
+
+    teacher3 = Teacher.find_or_create_by!(email: 'random3@example.com') do |teacher|
+        teacher.first_name = Faker::Name.first_name
+        teacher.last_name = Faker::Name.last_name
+        teacher.password = 'dupablada3'
+      end
     
     
     
