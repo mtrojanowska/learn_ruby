@@ -7,26 +7,13 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
-    teacher1 = Teacher.find_or_create_by!(email: 'random1@example.com') do |teacher|
-        teacher.first_name = Faker::Name.first_name
-        teacher.last_name = Faker::Name.last_name
-        teacher.password = 'dupablada1'
-      end
-
-    
-      teacher2 = Teacher.find_or_create_by!(email: 'random2@example.com') do |teacher|
-        teacher.first_name = Faker::Name.first_name
-        teacher.last_name = Faker::Name.last_name
-        teacher.password = 'dupablada2'
-      end
-
-
-    teacher3 = Teacher.find_or_create_by!(email: 'random3@example.com') do |teacher|
-        teacher.first_name = Faker::Name.first_name
-        teacher.last_name = Faker::Name.last_name
-        teacher.password = 'dupablada3'
-      end
-    
+emails = ['random1@gmail.com', 'random2@gmail.com', 'random3@gmail.com']
+3.times do
+teachers = Teacher.find_or_create_by!(email: emails.shift ) do |teacher|
+    teacher.first_name = Faker::Name.first_name
+    teacher.last_name = Faker::Name.last_name
+    teacher.password = 'dupablada'
+  end
+end
     
     
