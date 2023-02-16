@@ -6,3 +6,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+    
+ emails = ['random1@gmail.com', 'random2@gmail.com', 'random3@gmail.com']
+  emails.each do |email|
+    teachers = Teacher.find_or_create_by!(email: email) do |teacher|     
+    teacher.first_name = Faker::Name.first_name
+    teacher.last_name = Faker::Name.last_name
+    teacher.password = 'dupablada'
+  end
+ end
+    
